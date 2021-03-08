@@ -1,4 +1,35 @@
-# Getting Started with Create React App
+This application was created for Women Who Code Austin React.js meetup. It does not display actual weather.
+
+The purpose of this application is to demonstrate using redux-thunk to perform side effects, such as call the server, from within the Redux pattern.
+
+It is deployed here on Vercel
+
+https://weather-usedispatch-thunk-elze.vercel.app//
+
+This application uses Express.js for backend. To get it to run on your machine, do this:
+
+- In api/index.js, uncomment these lines:
+
+app.set('port', (process.env.PORT || 8080));
+
+and the one at the bottom:
+
+`app.listen(app.get('port'), function() {
+  console.log('Express app weather-useDispatch-thunk React is running on port', app.get('port'));
+});`
+
+In the `api` directory, run this command:
+
+`node index.js`
+
+This will start the server.
+
+In the root directory, run this command:
+
+`npm start`
+
+This will start the React.js frontend.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

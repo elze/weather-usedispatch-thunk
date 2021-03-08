@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.weather-alert {
+	margin-top: 10px;
+}
+
+.weather-title {
+	text-align: center;
+}
+
+.temp-button {
+	/* margin: auto; */
+	text-align: center;
+}

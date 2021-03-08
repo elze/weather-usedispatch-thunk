@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import './index.css';
+//import { fetchForecast } from './fetchForecast';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { weatherReducer } from './reducers';
+
+const store = createStore(weatherReducer, applyMiddleware(thunk));
+//store.dispatch(fetchForecast(5));
+
 ReactDOM.render(
+ <Provider store={store}>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App forecastId="5" />
+  </React.StrictMode>
+ </Provider>,
   document.getElementById('root')
 );
 
