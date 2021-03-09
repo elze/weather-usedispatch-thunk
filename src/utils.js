@@ -1,6 +1,6 @@
 const utils = {
   getForecastInCurrentUnits: (forecast, tempUnit) => {
-	  //console.log(`^^^^^^^^^^^^^^ utils.getForecastInCurrentUnits ; forecast = ${JSON.stringify(forecast)} tempUnit = ${tempUnit} `);
+	//console.log(`^^^^^^^^^^^^^^ utils.getForecastInCurrentUnits ; forecast = ${JSON.stringify(forecast)} tempUnit = ${tempUnit} `);
 	let convertedForecast;
 	if (tempUnit === "C") {
 		const temperature = (forecast.temperature - 32) / 9 * 5;		

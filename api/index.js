@@ -3,6 +3,8 @@ const { v4 } = require('uuid')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
+
+// To run this server locally, uncomment the line below. It is commented out to deploy this app on Vercel.
 //app.set('port', (process.env.PORT || 8080));
 
 const appDataF = 
@@ -65,6 +67,8 @@ const appDataC =
 
 let appData = appDataF;
 
+// This is a code sample from Vercel article on how to run an Express.js app on Vercel: https://vercel.com/guides/using-express-with-vercel
+// These code blocks can stay commented out.
 /*
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`
@@ -97,6 +101,7 @@ app.put('/api/tempUnit', function (req, res) {
     res.send({ temperatureUnit: tempUnit });
 })
 
+// To run this server locally, uncomment the code block below. It is commented out to deploy this app on Vercel.
 /*
 app.listen(app.get('port'), function() {
   console.log('Express app weather-useDispatch-thunk React is running on port', app.get('port'));

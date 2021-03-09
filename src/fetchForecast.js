@@ -1,15 +1,14 @@
+import axios from 'axios';
 import { FETCH_FORECAST_FAIL, FETCH_FORECAST_SUCCESS } from './constants';
 
 export const fetchForecast = (forecastId) => (dispatch) => {
 	const forecastUrl = `/api/forecasts`;
-	console.log(`fetchForecast: forecastId = ${forecastId}`);
+	//console.log(`fetchForecast: forecastId = ${forecastId}`);
 	
-	fetch(forecastUrl)
-	.then(res => res.json())
-	.then(data => {
-		console.log(data);
-		//console.log(`fetchForecast: data[forecastId] = ${JSON.stringify(data)}`);
-		return dispatch({ type: FETCH_FORECAST_SUCCESS, forecast: data.forecasts[forecastId], temperatureUnit: data.temperatureUnit });
+	axios.get(forecastUrl)
+	.then(res => {
+		//console.log(res);
+		return dispatch({ type: FETCH_FORECAST_SUCCESS, forecast: res.data.forecasts[forecastId], temperatureUnit: res.data.temperatureUnit });
 	})
 	.catch((err) => {
 		console.log(`fetchForecast: err = ${err}`);

@@ -4,7 +4,7 @@ import { FETCH_FORECAST_SUCCESS, SAVE_TEMPUNIT_SUCCESS } from './constants';
 const initialState = {forecast: {}, temperatureUnit: "F"};
 
 export function weatherReducer(state=initialState, action) {
-  console.log(`reducer: action.type = ${action.type}`);
+  //console.log(`reducer: action.type = ${action.type}`);
   switch (action.type) {
 	  case SAVE_TEMPUNIT_SUCCESS: 
 		if (action.unit !== state.temperatureUnit) {
@@ -16,7 +16,7 @@ export function weatherReducer(state=initialState, action) {
 	  case FETCH_FORECAST_SUCCESS:
 		//let newState = {...state, forecast: getForecastInCurrentUnits(action.forecast, state.temperatureUnit) };
 		let newState = {...state, forecast: action.forecast, temperatureUnit: action.temperatureUnit };
-		console.log(`reducer: FETCH_FORECAST_SUCCESS: newState = ${JSON.stringify(newState)}`);
+		//console.log(`reducer: FETCH_FORECAST_SUCCESS: newState = ${JSON.stringify(newState)}`);
 		return newState;
     default:
       return state;

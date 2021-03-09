@@ -4,13 +4,13 @@ The purpose of this application is to demonstrate using redux-thunk to perform s
 
 It is deployed here on Vercel
 
-https://weather-usedispatch-thunk-elze.vercel.app//
+https://weather-usedispatch-thunk-elze.vercel.app
 
 This application uses Express.js for backend. To get it to run on your machine, do this:
 
 - In api/index.js, uncomment these lines:
 
-app.set('port', (process.env.PORT || 8080));
+`app.set('port', (process.env.PORT || 8080));`
 
 and the one at the bottom:
 
