@@ -4,13 +4,15 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import './index.css';
-//import { fetchForecast } from './fetchForecast';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { weatherReducer } from './reducers';
 
 const store = createStore(weatherReducer, applyMiddleware(thunk));
+
+// You could uncomment the line below and use it to load the initial forecast data from the server, if you were not using the useEffect hook in the App.js.
+// But since we are using it, the line below is not necessary.
 //store.dispatch(fetchForecast(5));
 
 ReactDOM.render(

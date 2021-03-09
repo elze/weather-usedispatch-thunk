@@ -44,8 +44,6 @@ function getButtonVariant(tempUnitOld, tempUnit) {
 }
 
 function App({ forecastId }) {
-	//const initialState = {forecast: {}, temperatureUnit: "F"};
-	//const [state, dispatch] = React.useReducer(weatherReducer, initialState);
 	const {forecast, temperatureUnit } = useSelector((state) => ({forecast: state.forecast, temperatureUnit: state.temperatureUnit }));
 	//console.log(`forecast = ${JSON.stringify(state.forecast)}, temperatureUnit = ${state.temperatureUnit}`);
 	const dispatch = useDispatch();
